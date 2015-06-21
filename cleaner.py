@@ -6,13 +6,52 @@ by Nathan Danielsen
 nathanjdanielsen@gmail.com
 """
 
-
 #### Text cleaning utilities
 
 ### Lower
 ### Remove stop words
 ### Correct mispellings
 ### Remove HTML / Markup
+
+
+import nltk.data
+from nltk.tokenize import PunktWordTokenizer
+
+
+
+class TextCleaner(object):
+	"""
+	Takes in an iterable / sequence of multi-sentence text.
+
+	Returns cleaned text as requested.
+
+	Author Note: 
+	The goal is to have standardized text cleaning utilities that I can use for 
+	any text application with multi-language support.
+	
+	"""
+
+	def __init__(self, language='english'):
+
+		self.tokenizer = = nltk.data.load(‘tokenizers/punkt/' + language + '.pickle’)
+		self.punkt_word_tokenizer = PunktWordTokenizer()
+	
+	def sentence_tokenize(text):
+		self.sentences = tokenizer.tokenize(text)
+
+
+
+
+	def remove_stop(sentence):
+		self.punkt_word_tokenizer.tokenize(sentence)
+
+
+
+
+
+	return text
+
+
 
 
 #### Extract Features
